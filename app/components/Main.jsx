@@ -9,7 +9,7 @@ var Main = React.createClass({
             <Nav/>
                 <div className="row">
                     <div className="column medium-6 large-4 small-centered">
-                        {props.children}            
+                        {this.props.children}            
                     </div>
                 </div>
             </div>
