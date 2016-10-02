@@ -1,4 +1,5 @@
 $space-large: 2.5rem;
+$space-extra-large: 5rem;
 $title-color: #555;
 
 .page-title {
@@ -9,4 +10,12 @@ $title-color: #555;
 
 input[type=search] {
     box-shadow: none;
+}
+
+body {
+    height: auto;
+}
+
+.contact {
+    margin-top: $space-extra-large;
 }
