@@ -6,7 +6,13 @@ var Nav = React.createClass({
     onSearch: function(e) {
         e.preventDefault();
         
-        alert("Not yet wired up!");
+        var location = this.refs.search.value;
+        var encodedLocation = encodeURIComponent(location);
+        
+        if(location.length > 0) {
+            this.refs.search.value = '';
+            window.location.hash = '#/?location='+encodedLocation;
+        }
     },
     
     render: function() {
@@ -24,7 +30,7 @@ var Nav = React.createClass({
             <form onSubmit={this.onSearch}>
                 <ul className="menu">
                 <li>
-                    <input type="search" placeholder="Search weather by city"/>
+                    <input ref="search" type="search" placeholder="Search weather by city"/>
                 </li>
                 <li>
                     <input type="submit" className="button" value="Get Weather"/>    
